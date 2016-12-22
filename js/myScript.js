@@ -8,6 +8,7 @@ $(document).ready(function() {
 			success: function(data) {
 				console.log(data.artists.items[0].name);
 				$("ul").append("<li>" + data.artists.items[0].name + "</li>");
+				$("body").append("<img src=" + data.artists.items[0].images[2].url + ">");
 			}
 		});
 	});
