@@ -7,3 +7,7 @@ body {
 h1, p, input, button {
 	font-family: "Ubuntu", sans-serif;
 }
+
+header {
+	text-align: center;
+}
