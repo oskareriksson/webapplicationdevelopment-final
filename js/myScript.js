@@ -37,7 +37,7 @@
 $(document).ready(function(){
 
 	$("button").click(function(){
-		$btag = $("#btag").val();
+		$btag = $("#btag").val().replace("#", "-");
 		$platform = $('input[name="platform"]:checked').val();
 		$region = $('input[name="region"]:checked').val();
 
@@ -52,7 +52,7 @@ $(document).ready(function(){
 			}
 		});
 
-		
+		console.log($btag);
 	});
 
 });
