@@ -44,15 +44,13 @@ $(document).ready(function(){
 		$.ajax({
 			type: "GET",
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/profile",
-			success: function(data){
-				console.log(data.data.username);
-				console.log(data.data.level);
-				console.log(data.data.games.quick.wins);
-				console.log(data.data.games.competitive.wins);
+			success: function(d){
+				console.log(d.data.username);
+				console.log(d.data.level);
+				console.log(d.data.games.quick.wins);
+				console.log(d.data.games.competitive.wins);
 			}
 		});
-
-		console.log($btag);
 	});
 
 });
