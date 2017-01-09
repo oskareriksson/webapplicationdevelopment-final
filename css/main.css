@@ -2,3 +2,8 @@
 body {
 	background-color: #5997f9;
 }
+
+/*Text standards*/
+h1, p, input, button {
+	font-family: "Ubuntu", sans-serif;
+}
