@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 
 	//GET request for Spotify-artist using "search for an item" method
 	$("#b1").click(function() {
@@ -32,4 +32,5 @@ $(document).ready(function() {
 		});
 	});
 
-});
+});*/
+
