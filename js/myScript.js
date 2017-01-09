@@ -34,3 +34,25 @@
 
 });*/
 
+$(document).ready(function(){
+
+	$("button").click(function(){
+		$btag = $("#btag").val();
+		$platform = $('input[name="platform"]:checked').val();
+		$region = $('input[name="region"]:checked').val();
+
+		$.ajax({
+			type: "GET",
+			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/profile",
+			success: function(data){
+				console.log(data.data.username);
+				console.log(data.data.level);
+				console.log(data.data.games.quick.wins);
+				console.log(data.data.games.competitive.wins);
+			}
+		});
+
+		
+	});
+
+});

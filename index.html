@@ -9,13 +9,34 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>Enter your battletag, select platform, select region and press submit!</h1>
+
+					<form>
+						<input type="radio" name="platform" value="pc">PC
+						<input type="radio" name="platform" value="xbl">Xbox
+						<input type="radio" name="platform" value="psn">Playstation
+					</form>
+
+					<form>
+						<input type="radio" name="region" value="eu">EU
+						<input type="radio" name="region" value="us">US
+						<input type="radio" name="region" value="kr">KR
+						<input type="radio" name="region" value="cs">CS
+						<input type="radio" name="region" value="global">Global
+					</form>
+
+					<input id="btag" placeholder="Battletag goes here">
+					<button>Submit</button>
+
+					<ul></ul>
+				</div>
 			</div>
 		</div>
-	</div>
+	</main>
 
 <script
 	src="https://code.jquery.com/jquery-3.1.1.min.js"
