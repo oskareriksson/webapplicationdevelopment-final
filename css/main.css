@@ -54,6 +54,7 @@ input[type=radio]:checked + label:before {
   font-size: 66px;
   text-align: center;
   line-height: 24px;
+  box-shadow: 0 0 10px #E9D6F4;
   transition: font-size 0.1s;
 }
 /*---------------------------------*/
