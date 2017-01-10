@@ -7,11 +7,15 @@ body {
 h1, p, input, button, label {
 	font-family: "Ubuntu", sans-serif;
 }
+/*---------------------------------*/
 
+/*Header*/
 header {
 	text-align: center;
 }
+/*---------------------------------*/
 
+/*Radio input styling*/
 input[type=radio] {
   display: none;
 }
@@ -46,3 +50,4 @@ input[type=radio]:checked + label:before {
   text-align: center;
   line-height: 24px;
 }
+/*---------------------------------*/
