@@ -1,17 +1,22 @@
 /*My own CSS*/
 body {
-	background-color: #5997f9;
+	background-color: #60317a;
 }
 
 /*Text standards*/
 h1, p, input, button, label {
 	font-family: "Ubuntu", sans-serif;
+	color: white;
 }
 /*---------------------------------*/
 
 /*Header*/
 header {
 	text-align: center;
+}
+
+input {
+	color: black;
 }
 /*---------------------------------*/
 
@@ -49,5 +54,6 @@ input[type=radio]:checked + label:before {
   font-size: 66px;
   text-align: center;
   line-height: 24px;
+  transition: font-size 0.1s;
 }
 /*---------------------------------*/
