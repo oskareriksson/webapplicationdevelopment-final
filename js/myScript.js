@@ -39,10 +39,6 @@ $(document).ready(function(){
 		$("#menu1").toggle("slow");
 	});
 
-	$("#d2").click(function(){
-		$("#menu2").toggle("slow");
-	});
-
 	$("#fetchprofile").click(function(){
 		$btag = $("#btag").val().replace("#", "-");
 		$platform = $('input[name="platform"]:checked').val();
