@@ -19,7 +19,7 @@ input {
 	color: black;
 }
 
-	/*Radio input styling*/
+	/*Radio input*/
 	input[type=radio] {
 	  display: none;
 	}
@@ -58,7 +58,7 @@ input {
 	}
 	/*---------------------------------*/
 
-	/*Button styling*/
+	/*Buttons*/
 	button {
 		display: inline-block;
 		background-color: #744A8A;
@@ -76,5 +76,10 @@ input {
 	.fetch {
 		text-align: left;
 	}
+		/*Gamemode dropdown links*/
+		#menu1 {
+			text-align: center;
+		}
+		/*---------------------------------*/
 	/*---------------------------------*/
 /*---------------------------------*/
