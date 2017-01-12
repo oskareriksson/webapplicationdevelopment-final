@@ -35,9 +35,6 @@
 });*/
 
 $(document).ready(function(){
-	$("#d1").click(function(){
-		$("#menu1").toggle("slow");
-	});
 
 	$("#fetchprofile").click(function(){
 		$btag = $("#btag").val().replace("#", "-");
