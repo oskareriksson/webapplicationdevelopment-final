@@ -34,7 +34,7 @@
 
 });*/
 
-$(document).ready(function(){
+var gamemode = function() {
 	$("#gamemode").click(function(){
 		var $gamemode = $("#gamemode").text();
 
@@ -44,7 +44,9 @@ $(document).ready(function(){
 			$("#gamemode").text("Quickplay");
 		}
 	});
+};
 
+var fetchprofile = function() {
 	$("#fetchprofile").click(function(){
 		$btag = $("#btag").val().replace("#", "-");
 		$platform = $('input[name="platform"]:checked').val();
@@ -61,5 +63,7 @@ $(document).ready(function(){
 			}
 		});
 	});
+};
 
-});
+$(document).ready(gamemode);
+$(document).ready(fetchprofile);
