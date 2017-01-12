@@ -35,6 +35,15 @@
 });*/
 
 $(document).ready(function(){
+	$("#gamemode").click(function(){
+		var $gamemode = $("#gamemode").text();
+
+		if($gamemode === "Quickplay") {
+			$("#gamemode").text("Competitive");
+		} else if($gamemode === "Competitive") {
+			$("#gamemode").text("Quickplay");
+		}
+	});
 
 	$("#fetchprofile").click(function(){
 		$btag = $("#btag").val().replace("#", "-");
