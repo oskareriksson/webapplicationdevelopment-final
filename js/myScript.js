@@ -48,9 +48,9 @@ var gamemode = function() {
 
 var fetchprofile = function() {
 	$("#fetchprofile").click(function(){
-		$btag = $("#btag").val().replace("#", "-");
-		$platform = $('input[name="platform"]:checked').val();
-		$region = $('input[name="region"]:checked').val();
+		var $btag = $("#btag").val().replace("#", "-");
+		var $platform = $('input[name="platform"]:checked').val();
+		var $region = $('input[name="region"]:checked').val();
 
 		$.ajax({
 			type: "GET",
@@ -65,5 +65,26 @@ var fetchprofile = function() {
 	});
 };
 
+var fetchtotal = function() {
+	$("#fetchtotal").click(function(){
+		var $btag = $("#btag").val().replace("#", "-");
+		var $platform = $('input[name="platform"]:checked').val();
+		var $region = $('input[name="region"]:checked').val();
+		var $gamemode = $("#gamemode").text().toLowerCase();
+
+		$.ajax({
+			type: "GET",
+			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/allHeroes/",
+			success: function(d){
+				console.log(d.MeleeFinalBlows);
+				console.log(d.SoloKills);
+				console.log(d.ObjectiveKills);
+				console.log(d.FinalBlows);
+			}
+		});
+	});
+};
+
 $(document).ready(gamemode);
 $(document).ready(fetchprofile);
+$(document).ready(fetchtotal);
