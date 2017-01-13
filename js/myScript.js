@@ -85,6 +85,25 @@ var fetchtotal = function() {
 	});
 };
 
+var fetchplaytime = function() {
+	$("#fetchplaytime").click(function(){
+		var $btag = $("#btag").val().replace("#", "-");
+		var $platform = $('input[name="platform"]:checked').val();
+		var $region = $('input[name="region"]:checked').val();
+		var $gamemode = $("#gamemode").text().toLowerCase();
+
+		$.ajax({
+			type: "GET",
+			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/heroes/",
+			success: function(d) {
+				console.log(d);
+				//Getting CORS issue with this call, will look into it
+			}
+		});
+	});
+};
+
 $(document).ready(gamemode);
 $(document).ready(fetchprofile);
 $(document).ready(fetchtotal);
+$(document).ready(fetchplaytime);
