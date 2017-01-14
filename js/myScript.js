@@ -57,6 +57,7 @@ var fetchprofile = function() {
 		$.ajax({
 			type: "GET",
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/profile",
+			dataType: "json",
 			success: function(d){
 				console.log(d.data.username);
 				console.log(d.data.level);
@@ -78,6 +79,7 @@ var fetchtotal = function() {
 		$.ajax({
 			type: "GET",
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/allHeroes/",
+			dataType: "json",
 			success: function(d){
 				console.log(d.MeleeFinalBlows);
 				console.log(d.SoloKills);
@@ -99,6 +101,7 @@ var fetchplaytime = function() {
 		$.ajax({
 			type: "GET",
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/heroes",
+			dataType: "json",
 			success: function(d) {
 				console.log(d);
 			}
