@@ -55,7 +55,7 @@ var fetchprofile = function() {
 		var $region = $('input[name="region"]:checked').val();
 
 		$.ajax({
-			type: "GET",
+			method: "GET",
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/profile",
 			dataType: "json",
 			success: function(d){
@@ -77,7 +77,7 @@ var fetchtotal = function() {
 		var $gamemode = $("#gamemode").text().toLowerCase();
 
 		$.ajax({
-			type: "GET",
+			method: "GET",
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/allHeroes/",
 			dataType: "json",
 			success: function(d){
@@ -99,7 +99,7 @@ var fetchplaytime = function() {
 		var $gamemode = $("#gamemode").text().toLowerCase();
 
 		$.ajax({
-			type: "GET",
+			method: "GET",
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/heroes",
 			dataType: "json",
 			success: function(d) {
