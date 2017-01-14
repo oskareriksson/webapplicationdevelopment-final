@@ -34,6 +34,7 @@
 
 });*/
 
+//Gamemode selection function, alters between quickplay and competitive
 var gamemode = function() {
 	$("#gamemode").click(function(){
 		var $gamemode = $("#gamemode").text();
@@ -46,6 +47,7 @@ var gamemode = function() {
 	});
 };
 
+//Fetches a users profile through battletag, platform and region. Then displays data from your account
 var fetchprofile = function() {
 	$("#fetchprofile").click(function(){
 		var $btag = $("#btag").val().replace("#", "-");
@@ -65,6 +67,7 @@ var fetchprofile = function() {
 	});
 };
 
+//Fetches a users total statistics in either quickplay or competitive and displays that data
 var fetchtotal = function() {
 	$("#fetchtotal").click(function(){
 		var $btag = $("#btag").val().replace("#", "-");
@@ -85,6 +88,7 @@ var fetchtotal = function() {
 	});
 };
 
+//Fetches a users hero playtime in either quickplay or competitive and displays that data
 var fetchplaytime = function() {
 	$("#fetchplaytime").click(function(){
 		var $btag = $("#btag").val().replace("#", "-");
