@@ -103,7 +103,9 @@ var fetchplaytime = function() {
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/heroes",
 			dataType: "json",
 			success: function(d) {
-				console.log(d);
+				console.log(d[0].name);
+				console.log(d[1].name);
+				console.log(d[2].name);
 			}
 		});
 	});
