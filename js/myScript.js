@@ -98,10 +98,9 @@ var fetchplaytime = function() {
 
 		$.ajax({
 			type: "GET",
-			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/heroes/",
+			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/heroes",
 			success: function(d) {
 				console.log(d);
-				//Getting CORS issue with this call, will look into it
 			}
 		});
 	});
