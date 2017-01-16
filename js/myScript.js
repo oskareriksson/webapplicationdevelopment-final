@@ -17,16 +17,19 @@ var fetchprofile = function() {
 		var $btag = $("#btag").val().replace("#", "-");
 		var $platform = $('input[name="platform"]:checked').val();
 		var $region = $('input[name="region"]:checked').val();
+		var $mainrow = $("#mainrow");
 
 		$.ajax({
 			method: "GET",
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/profile",
 			dataType: "json",
 			success: function(d){
-				console.log(d.data.username);
+				/*console.log(d.data.username);
 				console.log(d.data.level);
 				console.log(d.data.games.quick.wins);
-				console.log(d.data.games.competitive.wins);
+				console.log(d.data.games.competitive.wins);*/
+				$mainrow.empty();
+				
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
