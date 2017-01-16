@@ -27,6 +27,9 @@ var fetchprofile = function() {
 				console.log(d.data.level);
 				console.log(d.data.games.quick.wins);
 				console.log(d.data.games.competitive.wins);
+			},
+			error: function(jqXHR, textStatus, errorThrown){
+				console.log(textStatus, errorThrown);
 			}
 		});
 	});
@@ -49,6 +52,9 @@ var fetchtotal = function() {
 				console.log(d.SoloKills);
 				console.log(d.ObjectiveKills);
 				console.log(d.FinalBlows);
+			},
+			error: function(jqXHR, textStatus, errorThrown){
+				console.log(textStatus, errorThrown);
 			}
 		});
 	});
@@ -70,6 +76,9 @@ var fetchplaytime = function() {
 				console.log(d[0].name);
 				console.log(d[1].name);
 				console.log(d[2].name);
+			},
+			error: function(jqXHR, textStatus, errorThrown){
+				console.log(textStatus, errorThrown);
 			}
 		});
 	});
