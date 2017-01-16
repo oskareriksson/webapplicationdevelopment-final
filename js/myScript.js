@@ -29,8 +29,21 @@ var fetchprofile = function() {
 				console.log(d.data.games.quick.wins);
 				console.log(d.data.games.competitive.wins);*/
 				$mainrow.empty();
+				var $profileImg = d.data.avatar;
+				var $username = d.data.username;
+				var $level = d.data.level;
+				var $quickPlaytime = d.data.playtime.quick;
+				var $compPlaytime = d.data.playtime.competitive;
+				var $quickWins = d.data.games.quick.wins;
+				var $compWins = d.data.games.competitive.wins;
+				var $compLoss = d.data.games.competitive.lost;
+				var $compPlayed = d.data.games.competitive.played;
+				var $compRank = d.data.competitive.rank;
+				var $compRankImg = d.data.competitive.rank_img;
 
-				$("<img>").attr("src", d.data.avatar).addClass("center").appendTo("#mainrow");
+				$("<img>").attr("src", $profileImg).appendTo($mainrow);
+				$("<h3>" + $username + "</h3>").addClass("center").appendTo($mainrow);
+				$("<h4>Level: " + $level + "</h4>").addClass("center").appendTo($mainrow);
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
@@ -46,12 +59,14 @@ var fetchtotal = function() {
 		var $platform = $('input[name="platform"]:checked').val();
 		var $region = $('input[name="region"]:checked').val();
 		var $gamemode = $("#gamemode").text().toLowerCase();
+		var $mainrow = $("#mainrow");
 
 		$.ajax({
 			method: "GET",
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/allHeroes/",
 			dataType: "json",
 			success: function(d){
+				$mainrow.empty();
 				console.log(d.MeleeFinalBlows);
 				console.log(d.SoloKills);
 				console.log(d.ObjectiveKills);
@@ -71,12 +86,14 @@ var fetchplaytime = function() {
 		var $platform = $('input[name="platform"]:checked').val();
 		var $region = $('input[name="region"]:checked').val();
 		var $gamemode = $("#gamemode").text().toLowerCase();
+		var $mainrow = $("#mainrow");
 
 		$.ajax({
 			method: "GET",
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/heroes",
 			dataType: "json",
 			success: function(d) {
+				$mainrow.empty();
 				console.log(d[0].name);
 				console.log(d[1].name);
 				console.log(d[2].name);

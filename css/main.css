@@ -4,7 +4,7 @@ body {
 }
 
 /*Text standards*/
-h1, p, input, button, label {
+h1, h3, h4, p, input, button, label {
 	font-family: "Ubuntu", sans-serif;
 	color: white;
 }
@@ -88,4 +88,8 @@ main {
 img {
 	display: block;
 	margin: 0 auto;
+}
+
+.center {
+	text-align: center;
 }
