@@ -29,7 +29,8 @@ var fetchprofile = function() {
 				console.log(d.data.games.quick.wins);
 				console.log(d.data.games.competitive.wins);*/
 				$mainrow.empty();
-				
+
+				$("<img>").attr("src", d.data.avatar).addClass("center").appendTo("#mainrow");
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
