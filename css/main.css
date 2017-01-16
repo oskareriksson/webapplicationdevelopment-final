@@ -4,7 +4,7 @@ body {
 }
 
 /*Text standards*/
-h1, h3, h4, p, input, button, label {
+h1, h2, h3, h4, h5, h6, p, input, button, label {
 	font-family: "Ubuntu", sans-serif;
 	color: white;
 }
