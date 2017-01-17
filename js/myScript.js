@@ -85,44 +85,50 @@ var fetchtotal = function() {
 			dataType: "json",
 			success: function(d){
 				$mainrow.empty();
+				//Meele
 				var $meeleFinalBlows = d.MeleeFinalBlows;
+				var $meeleFinalAvg = d["MeleeFinalBlows-Average"];
+				var $mostMeeleFinalInGame = d["MeleeFinalBlows-MostinGame"];
+				//Eliminations/Kills
+				var $eliminations = d.Eliminations;
+				var $elimAvg = d["Eliminations-Average"];
+				var $mostElimInGame = d["Eliminations-MostinGame"];
 				var $soloKills = d.SoloKills;
+				var $soloKillsAvg = d["SoloKills-Average"];
+				var $soloKillsInGame = d["SoloKills-MostinGame"];
 				var $objectiveKills = d.ObjectiveKills;
+				var $objKillsAvg = d["ObjectiveKills-Average"];
+				var $mostObjKillsInGame = d["ObjectiveKills-MostinGame"];
 				var $finalBlows = d.FinalBlows;
+				var $finalBlowsAvg = d["FinalBlows-Average"];
+				var $mostFinalBlowsInGame = d["FinalBlows-MostinGame"];
+				var $multiKills = d.Multikills;
+				var $multiKillBest = d["Multikill-Best"];
+				var $environmentalKills = d.EnvironmentalKills;
+
+				//
 				var $damageDone = d.DamageDone;
 				//
-				var $eliminations = d.Eliminations;
-				var $environmentalKills = d.EnvironmentalKills;
-				var $multiKills = d.Multikills;
+				
 				var $reconAssists = d.ReconAssists;
 				var $healingDone = d.HealingDone;
 				//
 				var $teleporterPadsDestroyed = d.TeleporterPadsDestroyed;
-				var $mostElimInGame = d["Eliminations-MostinGame"];
-				var $mostFinalBlowsInGame = d["FinalBlows-MostinGame"];
 				var $mostDamageInGame = d["DamageDone-MostinGame"];
 				var $mostHealingInGame = d["HealingDone-MostinGame"];
 				//
 				var $mostDefAssInGame = d["DefensiveAssists-MostinGame"];
 				var $mostOffAssInGame = d["OffensiveAssists-MostinGame"];
-				var $mostObjKillsInGame = d["ObjectiveKills-MostinGame"];
 				var $mostObjTimeInGame = d["ObjectiveTime-MostinGame"];
-				var $multiKillBest = d["Multikill-Best"];
 				//
-				var $soloKillsInGame = d["SoloKills-MostinGame"];
 				var $onFireInGame = d["TimeSpentonFire-MostinGame"];
-				var $meeleFinalAvg = d["MeleeFinalBlows-Average"];
 				var $onFireAvg = d["TimeSpentonFire-Average"];
-				var $soloKillsAvg = d["SoloKills-Average"];
 				//
 				var $objTimeAvg = d["ObjectiveTime-Average"];
-				var $objKillsAvg = d["ObjectiveKills-Average"];
 				var $healingDoneAvg = d["HealingDone-Average"];
-				var $finalBlowsAvg = d["FinalBlows-Average"];
 				var $deathAvg = d["Deaths-Average"];
 				//
 				var $dmgDoneAvg = d["DamageDone-Average"];
-				var $elimAvg = d["Eliminations-Average"];
 				var $deaths = d.Deaths;
 				var $environmentalDeaths = d.EnvironmentalDeaths;
 				var $cards = d.Cards;
@@ -136,7 +142,6 @@ var fetchtotal = function() {
 				var $onFire = d.TimeSpentonFire;
 				var $objTime = d.ObjectiveTime;
 				var $timePlayed = d.TimePlayed;
-				var $mostMeeleFinalInGame = d["MeleeFinalBlows-MostinGame"];
 				var $reconAssAvg = d["ReconAssists-Average"];
 				//
 				var $defensiveAss = d.DefensiveAssists;
