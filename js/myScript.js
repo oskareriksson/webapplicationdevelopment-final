@@ -96,7 +96,7 @@ var fetchtotal = function() {
 				var $soloKills = d.SoloKills;
 				var $soloKillsAvg = d["SoloKills-Average"];
 				var $soloKillsInGame = d["SoloKills-MostinGame"];
-				var $objectiveKills = d.ObjectiveKills;
+				var $objKills = d.ObjectiveKills;
 				var $objKillsAvg = d["ObjectiveKills-Average"];
 				var $mostObjKillsInGame = d["ObjectiveKills-MostinGame"];
 				var $finalBlows = d.FinalBlows;
@@ -106,21 +106,21 @@ var fetchtotal = function() {
 				var $multiKillBest = d["Multikill-Best"];
 				var $environmentalKills = d.EnvironmentalKills;
 				//Damage done
-				var $damageDone = d.DamageDone;
+				var $dmgDone = d.DamageDone;
 				var $dmgDoneAvg = d["DamageDone-Average"];
-				var $mostDamageInGame = d["DamageDone-MostinGame"];
+				var $mostDmgInGame = d["DamageDone-MostinGame"];
 				//Healing done
 				var $healingDone = d.HealingDone;
 				var $healingDoneAvg = d["HealingDone-Average"];
 				var $mostHealingInGame = d["HealingDone-MostinGame"];
 				//Assists
-				var $offensiveAss = d.OffensiveAssists;
-				var $offensiveAssAvg = d["OffensiveAssists-Average"];
+				var $offAss = d.OffensiveAssists;
+				var $offAssAvg = d["OffensiveAssists-Average"];
 				var $mostOffAssInGame = d["OffensiveAssists-MostinGame"];
-				var $defensiveAss = d.DefensiveAssists;
-				var $defensiveAssAvg = d["DefensiveAssists-Average"];
+				var $defAss = d.DefensiveAssists;
+				var $defAssAvg = d["DefensiveAssists-Average"];
 				var $mostDefAssInGame = d["DefensiveAssists-MostinGame"];
-				var $reconAssists = d.ReconAssists;
+				var $reconAss = d.ReconAssists;
 				var $reconAssAvg = d["ReconAssists-Average"];
 				//Objective
 				var $objTime = d.ObjectiveTime;
@@ -132,29 +132,18 @@ var fetchtotal = function() {
 				var $onFireInGame = d["TimeSpentonFire-MostinGame"];
 				//Deaths
 				var $deaths = d.Deaths;
-				var $deathAvg = d["Deaths-Average"];
-
-				var $teleporterPadsDestroyed = d.TeleporterPadsDestroyed;
-				//
-				//
-				//
-				//
+				var $deathsAvg = d["Deaths-Average"];
 				var $environmentalDeaths = d.EnvironmentalDeaths;
-				var $cards = d.Cards;
-				//
+				//Medals
 				var $medals = d.Medals;
 				var $goldMedals = d["Medals-Gold"];
 				var $silverMedals = d["Medals-Silver"];
 				var $bronzeMedals = d["Medals-Bronze"];
+				//Misc
+				var $cards = d.Cards;
 				var $gamesWon = d.GamesWon;
-				//
 				var $timePlayed = d.TimePlayed;
-				//
-
-				console.log($defensiveAss);
-				console.log($defensiveAssAvg);
-				console.log($offensiveAss);
-				console.log($offensiveAssAvg);
+				var $teleporterPadsDestroyed = d.TeleporterPadsDestroyed;
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
