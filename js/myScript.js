@@ -85,6 +85,7 @@ var fetchtotal = function() {
 			dataType: "json",
 			success: function(d){
 				$mainrow.empty();
+				//Quickplay
 				//Meele
 				var $meeleFinalBlows = d.MeleeFinalBlows;
 				var $meeleFinalAvg = d["MeleeFinalBlows-Average"];
@@ -144,6 +145,17 @@ var fetchtotal = function() {
 				var $gamesWon = d.GamesWon;
 				var $timePlayed = d.TimePlayed;
 				var $teleporterPadsDestroyed = d.TeleporterPadsDestroyed;
+
+				//Competitive
+				//No recon stats are logged in competitive(recon assists/recon assists average), but the variables below are logged in competitive mode only and not quickplay. Other than that the same
+				//properties/variables are used.
+				var $gamesPlayed = d.GamesPlayed;
+				var $gamesTied = d.GamesTied;
+				var $gamesLost = d.GamesLost;
+
+				console.log($gamesPlayed);
+				console.log($gamesTied);
+				console.log($gamesLost);
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
