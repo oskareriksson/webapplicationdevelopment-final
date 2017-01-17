@@ -113,7 +113,6 @@ var fetchtotal = function() {
 				var $healingDone = d.HealingDone;
 				var $healingDoneAvg = d["HealingDone-Average"];
 				var $mostHealingInGame = d["HealingDone-MostinGame"];
-
 				//Assists
 				var $offensiveAss = d.OffensiveAssists;
 				var $offensiveAssAvg = d["OffensiveAssists-Average"];
@@ -123,16 +122,18 @@ var fetchtotal = function() {
 				var $mostDefAssInGame = d["DefensiveAssists-MostinGame"];
 				var $reconAssists = d.ReconAssists;
 				var $reconAssAvg = d["ReconAssists-Average"];
+				//Objective
+				var $objTime = d.ObjectiveTime;
+				var $objTimeAvg = d["ObjectiveTime-Average"];
+				var $mostObjTimeInGame = d["ObjectiveTime-MostinGame"];
 
 				//
 				var $teleporterPadsDestroyed = d.TeleporterPadsDestroyed;
 				//
-				var $mostObjTimeInGame = d["ObjectiveTime-MostinGame"];
 				//
 				var $onFireInGame = d["TimeSpentonFire-MostinGame"];
 				var $onFireAvg = d["TimeSpentonFire-Average"];
 				//
-				var $objTimeAvg = d["ObjectiveTime-Average"];
 				var $deathAvg = d["Deaths-Average"];
 				//
 				var $deaths = d.Deaths;
@@ -146,7 +147,6 @@ var fetchtotal = function() {
 				var $gamesWon = d.GamesWon;
 				//
 				var $onFire = d.TimeSpentonFire;
-				var $objTime = d.ObjectiveTime;
 				var $timePlayed = d.TimePlayed;
 				//
 
