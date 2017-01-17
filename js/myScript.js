@@ -109,16 +109,21 @@ var fetchtotal = function() {
 				var $damageDone = d.DamageDone;
 				var $dmgDoneAvg = d["DamageDone-Average"];
 				var $mostDamageInGame = d["DamageDone-MostinGame"];
-				//
-				
+				//Assists
+				var $offensiveAss = d.OffensiveAssists;
+				var $offensiveAssAvg = d["OffensiveAssists-Average"];
+				var $mostOffAssInGame = d["OffensiveAssists-MostinGame"];
+				var $defensiveAss = d.DefensiveAssists;
+				var $defensiveAssAvg = d["DefensiveAssists-Average"];
+				var $mostDefAssInGame = d["DefensiveAssists-MostinGame"];
 				var $reconAssists = d.ReconAssists;
+				var $reconAssAvg = d["ReconAssists-Average"];
+
 				var $healingDone = d.HealingDone;
 				//
 				var $teleporterPadsDestroyed = d.TeleporterPadsDestroyed;
 				var $mostHealingInGame = d["HealingDone-MostinGame"];
 				//
-				var $mostDefAssInGame = d["DefensiveAssists-MostinGame"];
-				var $mostOffAssInGame = d["OffensiveAssists-MostinGame"];
 				var $mostObjTimeInGame = d["ObjectiveTime-MostinGame"];
 				//
 				var $onFireInGame = d["TimeSpentonFire-MostinGame"];
@@ -141,12 +146,7 @@ var fetchtotal = function() {
 				var $onFire = d.TimeSpentonFire;
 				var $objTime = d.ObjectiveTime;
 				var $timePlayed = d.TimePlayed;
-				var $reconAssAvg = d["ReconAssists-Average"];
 				//
-				var $defensiveAss = d.DefensiveAssists;
-				var $defensiveAssAvg = d["DefensiveAssists-Average"];
-				var $offensiveAss = d.OffensiveAssists;
-				var $offensiveAssAvg = d["OffensiveAssists-Average"];
 
 				console.log($defensiveAss);
 				console.log($defensiveAssAvg);
