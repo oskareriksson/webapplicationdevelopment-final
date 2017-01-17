@@ -176,9 +176,15 @@ var fetchplaytime = function() {
 			dataType: "json",
 			success: function(d) {
 				$mainrow.empty();
-				console.log(d[0].name);
+				/*console.log(d[0].name);
 				console.log(d[1].name);
-				console.log(d[2].name);
+				console.log(d[2].name);*/
+				$("<img>").attr("src", d[0].image).appendTo($mainrow);
+				$("<h2>" + d[0].name + "</h2>").addClass("center").appendTo($mainrow);
+				$("<h2>" + d[0].playtime + "</h2").addClass("center").appendTo($mainrow);
+				//For some reason playtime wont append to $mainrow, but gets logged in console, will look into it.
+				console.log(d[0].playtime);
+				console.log(d);
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
