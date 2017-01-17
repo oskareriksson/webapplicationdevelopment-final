@@ -126,13 +126,15 @@ var fetchtotal = function() {
 				var $objTime = d.ObjectiveTime;
 				var $objTimeAvg = d["ObjectiveTime-Average"];
 				var $mostObjTimeInGame = d["ObjectiveTime-MostinGame"];
+				//On fire
+				var $onFire = d.TimeSpentonFire;
+				var $onFireAvg = d["TimeSpentonFire-Average"];
+				var $onFireInGame = d["TimeSpentonFire-MostinGame"];
 
 				//
 				var $teleporterPadsDestroyed = d.TeleporterPadsDestroyed;
 				//
 				//
-				var $onFireInGame = d["TimeSpentonFire-MostinGame"];
-				var $onFireAvg = d["TimeSpentonFire-Average"];
 				//
 				var $deathAvg = d["Deaths-Average"];
 				//
@@ -146,7 +148,6 @@ var fetchtotal = function() {
 				var $bronzeMedals = d["Medals-Bronze"];
 				var $gamesWon = d.GamesWon;
 				//
-				var $onFire = d.TimeSpentonFire;
 				var $timePlayed = d.TimePlayed;
 				//
 
