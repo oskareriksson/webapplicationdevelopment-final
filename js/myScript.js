@@ -105,16 +105,16 @@ var fetchtotal = function() {
 				var $multiKills = d.Multikills;
 				var $multiKillBest = d["Multikill-Best"];
 				var $environmentalKills = d.EnvironmentalKills;
-
-				//
+				//Damage done
 				var $damageDone = d.DamageDone;
+				var $dmgDoneAvg = d["DamageDone-Average"];
+				var $mostDamageInGame = d["DamageDone-MostinGame"];
 				//
 				
 				var $reconAssists = d.ReconAssists;
 				var $healingDone = d.HealingDone;
 				//
 				var $teleporterPadsDestroyed = d.TeleporterPadsDestroyed;
-				var $mostDamageInGame = d["DamageDone-MostinGame"];
 				var $mostHealingInGame = d["HealingDone-MostinGame"];
 				//
 				var $mostDefAssInGame = d["DefensiveAssists-MostinGame"];
@@ -128,7 +128,6 @@ var fetchtotal = function() {
 				var $healingDoneAvg = d["HealingDone-Average"];
 				var $deathAvg = d["Deaths-Average"];
 				//
-				var $dmgDoneAvg = d["DamageDone-Average"];
 				var $deaths = d.Deaths;
 				var $environmentalDeaths = d.EnvironmentalDeaths;
 				var $cards = d.Cards;
