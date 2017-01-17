@@ -153,9 +153,6 @@ var fetchtotal = function() {
 				var $gamesTied = d.GamesTied;
 				var $gamesLost = d.GamesLost;
 
-				console.log($gamesPlayed);
-				console.log($gamesTied);
-				console.log($gamesLost);
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
