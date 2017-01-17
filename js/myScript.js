@@ -130,15 +130,15 @@ var fetchtotal = function() {
 				var $onFire = d.TimeSpentonFire;
 				var $onFireAvg = d["TimeSpentonFire-Average"];
 				var $onFireInGame = d["TimeSpentonFire-MostinGame"];
+				//Deaths
+				var $deaths = d.Deaths;
+				var $deathAvg = d["Deaths-Average"];
 
-				//
 				var $teleporterPadsDestroyed = d.TeleporterPadsDestroyed;
 				//
 				//
 				//
-				var $deathAvg = d["Deaths-Average"];
 				//
-				var $deaths = d.Deaths;
 				var $environmentalDeaths = d.EnvironmentalDeaths;
 				var $cards = d.Cards;
 				//
