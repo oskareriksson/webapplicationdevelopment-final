@@ -85,10 +85,35 @@ var fetchtotal = function() {
 			dataType: "json",
 			success: function(d){
 				$mainrow.empty();
-				console.log(d.MeleeFinalBlows);
-				console.log(d.SoloKills);
-				console.log(d.ObjectiveKills);
-				console.log(d.FinalBlows);
+				var $meeleFinalBlows = d.MeleeFinalBlows;
+				var $soloKills = d.SoloKills;
+				var $objectiveKills = d.ObjectiveKills;
+				var $finalBlows = d.FinalBlows;
+				var $damageDone = d.DamageDone;
+				//
+				var $eliminations = d.Eliminations;
+				var $environmentalKills = d.EnvironmentalKills;
+				var $multiKills = d.Multikills;
+				var $reconAssists = d.ReconAssists;
+				var $healingDone = d.HealingDone;
+				//
+				var $teleporterPadsDestroyed = d.TeleporterPadsDestroyed;
+				var $mostElimInGame = d["Eliminations-MostinGame"];
+				var $mostFinalBlowsInGame = d["FinalBlows-MostinGame"];
+				var $mostDamageInGame = d["DamageDone-MostinGame"];
+				var $mostHealingInGame = d["HealingDone-MostinGame"];
+				//
+				var $mostDefAssInGame = d["DefensiveAssists-MostinGame"];
+				var $mostOffAssInGame = d["OffensiveAssists-MostinGame"];
+				var $mostObjKillsInGame = d["ObjectiveKills-MostinGame"];
+				var $mostObjTimeInGame = d["ObjectiveTime-MostinGame"];
+				var $multiKillBest = d["Multikill-Best"];
+
+				console.log($mostDefAssInGame);
+				console.log($mostOffAssInGame);
+				console.log($mostObjKillsInGame);
+				console.log($mostObjTimeInGame);
+				console.log($multiKillBest);
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
