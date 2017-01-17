@@ -108,12 +108,46 @@ var fetchtotal = function() {
 				var $mostObjKillsInGame = d["ObjectiveKills-MostinGame"];
 				var $mostObjTimeInGame = d["ObjectiveTime-MostinGame"];
 				var $multiKillBest = d["Multikill-Best"];
+				//
+				var $soloKillsInGame = d["SoloKills-MostinGame"];
+				var $onFireInGame = d["TimeSpentonFire-MostinGame"];
+				var $meeleFinalAvg = d["MeleeFinalBlows-Average"];
+				var $onFireAvg = d["TimeSpentonFire-Average"];
+				var $soloKillsAvg = d["SoloKills-Average"];
+				//
+				var $objTimeAvg = d["ObjectiveTime-Average"];
+				var $objKillsAvg = d["ObjectiveKills-Average"];
+				var $healingDoneAvg = d["HealingDone-Average"];
+				var $finalBlowsAvg = d["FinalBlows-Average"];
+				var $deathAvg = d["Deaths-Average"];
+				//
+				var $dmgDoneAvg = d["DamageDone-Average"];
+				var $elimAvg = d["Eliminations-Average"];
+				var $deaths = d.Deaths;
+				var $environmentalDeaths = d.EnvironmentalDeaths;
+				var $cards = d.Cards;
+				//
+				var $medals = d.Medals;
+				var $goldMedals = d["Medals-Gold"];
+				var $silverMedals = d["Medals-Silver"];
+				var $bronzeMedals = d["Medals-Bronze"];
+				var $gamesWon = d.GamesWon;
+				//
+				var $onFire = d.TimeSpentonFire;
+				var $objTime = d.ObjectiveTime;
+				var $timePlayed = d.TimePlayed;
+				var $mostMeeleFinalInGame = d["MeleeFinalBlows-MostinGame"];
+				var $reconAssAvg = d["ReconAssists-Average"];
+				//
+				var $defensiveAss = d.DefensiveAssists;
+				var $defensiveAssAvg = d["DefensiveAssists-Average"];
+				var $offensiveAss = d.OffensiveAssists;
+				var $offensiveAssAvg = d["OffensiveAssists-Average"];
 
-				console.log($mostDefAssInGame);
-				console.log($mostOffAssInGame);
-				console.log($mostObjKillsInGame);
-				console.log($mostObjTimeInGame);
-				console.log($multiKillBest);
+				console.log($defensiveAss);
+				console.log($defensiveAssAvg);
+				console.log($offensiveAss);
+				console.log($offensiveAssAvg);
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
