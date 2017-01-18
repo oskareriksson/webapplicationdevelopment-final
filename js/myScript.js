@@ -153,6 +153,34 @@ var fetchtotal = function() {
 				var $gamesTied = d.GamesTied;
 				var $gamesLost = d.GamesLost;
 
+				var $totalData = 
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Meele stats</h2>" +
+				"<h3>" + d["MeleeFinalBlows"] + " Final blows</h3>" +
+				"<h3>" + d["MeleeFinalBlows-Average"] + " Average Final Blows</h3>" +
+				"<h3>" + d["MeleeFinalBlows-MostinGame"] + " Most Final Blows In Game</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Eliminations/Kills</h2>" +
+				"<h3>" + d["Eliminations"] + " Total Eliminations</h3>" +
+				"<h3>" + d["Eliminations-Average"] + " Average Eliminations</h3>" +
+				"<h3>" + d["Eliminations-MostinGame"] + " Most Eliminations In Game" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" + 
+				"<h2>Solo Kills</h2>" +
+				"<h3>" + d["SoloKills"] + " Solo Kills</h3>" +
+				"<h3>" + d["SoloKills-Average"] + " Average Solo Kills</h3>" +
+				"<h3>" + d["SoloKills-MostinGame"] + " Most Solo Kills In Game</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" + 
+				"<h2>Objective Kills</h2>" +
+				"<h3>" + d["ObjectiveKills"] + " Objective Kills</h3>" +
+				"<h3>" + d["ObjectiveKills-Average"] + " Average Objective Kills</h3>" +
+				"<h3>" + d["ObjectiveKills-MostinGame"] + " Most Objective Kills In Game</h3>" +
+				"</div>"
+
+				$($totalData).appendTo($mainrow);
+
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
