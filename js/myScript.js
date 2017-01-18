@@ -176,15 +176,18 @@ var fetchplaytime = function() {
 			dataType: "json",
 			success: function(d) {
 				$mainrow.empty();
-				/*console.log(d[0].name);
-				console.log(d[1].name);
-				console.log(d[2].name);*/
 				$("<img>").attr("src", d[0].image).appendTo($mainrow);
 				$("<h3>" + d[0].name + "</h3>").addClass("center").appendTo($mainrow);
 				$("<h3>" + d[0].playtime + "</h3>").addClass("center").appendTo($mainrow);
-				//For some reason playtime wont append to $mainrow, but gets logged in console, will look into it.
-				console.log(d[0].playtime);
-				console.log(d);
+				$("<img>").attr("src", d[1].image).appendTo($mainrow);
+				$("<h3>" + d[1].name + "</h3>").addClass("center").appendTo($mainrow);
+				$("<h3>" + d[1].playtime + "</h3>").addClass("center").appendTo($mainrow);
+				$("<img>").attr("src", d[2].image).appendTo($mainrow);
+				$("<h3>" + d[2].name + "</h3>").addClass("center").appendTo($mainrow);
+				$("<h3>" + d[2].playtime + "</h3>").addClass("center").appendTo($mainrow);
+				$("<img>").attr("src", d[3].image).appendTo($mainrow);
+				$("<h3>" + d[3].name + "</h3>").addClass("center").appendTo($mainrow);
+				$("<h3>" + d[3].playtime + "</h3>").addClass("center").appendTo($mainrow);
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
