@@ -176,21 +176,6 @@ var fetchplaytime = function() {
 			dataType: "json",
 			success: function(d) {
 				$mainrow.empty();
-				/*$("<img>").attr("src", d[0].image).appendTo($mainrow);
-				$("<h3>" + d[0].name + "</h3>").addClass("center").appendTo($mainrow);
-				$("<h3>" + d[0].playtime + "</h3>").addClass("center").appendTo($mainrow);
-				$("<img>").attr("src", d[1].image).appendTo($mainrow);
-				$("<h3>" + d[1].name + "</h3>").addClass("center").appendTo($mainrow);
-				$("<h3>" + d[1].playtime + "</h3>").addClass("center").appendTo($mainrow);
-				$("<img>").attr("src", d[2].image).appendTo($mainrow);
-				$("<h3>" + d[2].name + "</h3>").addClass("center").appendTo($mainrow);
-				$("<h3>" + d[2].playtime + "</h3>").addClass("center").appendTo($mainrow);
-				$("<img>").attr("src", d[3].image).appendTo($mainrow);
-				$("<h3>" + d[3].name + "</h3>").addClass("center").appendTo($mainrow);
-				$("<h3>" + d[3].playtime + "</h3>").addClass("center").appendTo($mainrow);
-				$("<img>").attr("src", d[4].image).appendTo($mainrow);
-				$("<h3>" + d[4].name + "</h3>").addClass("center").appendTo($mainrow);
-				$("<h3>" + d[4].playtime + "</h3>").addClass("center").appendTo($mainrow);*/
 				for(i = 0; i < d.length; i++){
 					$("<img>").attr("src", d[i].image).appendTo($mainrow);
 					$("<h3>" + d[i].name + "</h3>").addClass("center").appendTo($mainrow);
