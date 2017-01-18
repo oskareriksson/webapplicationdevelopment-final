@@ -155,7 +155,7 @@ var fetchtotal = function() {
 
 				var $totalData = 
 				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
-				"<h2>Meele stats</h2>" +
+				"<h2>Meele Stats</h2>" +
 				"<h3>" + d["MeleeFinalBlows"] + " Final blows</h3>" +
 				"<h3>" + d["MeleeFinalBlows-Average"] + " Average Final Blows</h3>" +
 				"<h3>" + d["MeleeFinalBlows-MostinGame"] + " Most Final Blows In Game</h3>" +
@@ -166,17 +166,38 @@ var fetchtotal = function() {
 				"<h3>" + d["Eliminations-Average"] + " Average Eliminations</h3>" +
 				"<h3>" + d["Eliminations-MostinGame"] + " Most Eliminations In Game" +
 				"</div>" +
-				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" + 
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
 				"<h2>Solo Kills</h2>" +
 				"<h3>" + d["SoloKills"] + " Solo Kills</h3>" +
 				"<h3>" + d["SoloKills-Average"] + " Average Solo Kills</h3>" +
 				"<h3>" + d["SoloKills-MostinGame"] + " Most Solo Kills In Game</h3>" +
 				"</div>" +
-				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" + 
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
 				"<h2>Objective Kills</h2>" +
 				"<h3>" + d["ObjectiveKills"] + " Objective Kills</h3>" +
 				"<h3>" + d["ObjectiveKills-Average"] + " Average Objective Kills</h3>" +
 				"<h3>" + d["ObjectiveKills-MostinGame"] + " Most Objective Kills In Game</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Final Blows</h2>" +
+				"<h3>" + d["FinalBlows"] + " Final Blows</h3>" +
+				"<h3>" + d["FinalBlows-Average"] + " Average Final Blows</h3>" +
+				"<h3>" + d["FinalBlows-MostinGame"] + " Most Final Blows In Game</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Multikills</h2>" +
+				"<h3>" + d["Multikills"] + " Final Blows</h3>" +
+				"<h3>" + d["Multikill-Best"] + " Average Final Blows</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Environmental Kills</h2>" +
+				"<h3>" + d["EnvironmentalKills"] + " Environmental Kills</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Damage Done</h2>" +
+				"<h3>" + d["DamageDone"] + " Damage Done</h3>" +
+				"<h3>" + d["DamageDone-Average"] + " Average Damage Done</h3>" +
+				"<h3>" + d["DamageDone-MostinGame"] + " Most Damage Done In Game</h3>" +
 				"</div>"
 
 				$($totalData).appendTo($mainrow);
