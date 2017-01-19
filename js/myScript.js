@@ -186,19 +186,81 @@ var fetchtotal = function() {
 				"</div>" +
 				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
 				"<h2>Multikills</h2>" +
-				"<h3>" + d["Multikills"] + " Final Blows</h3>" +
-				"<h3>" + d["Multikill-Best"] + " Average Final Blows</h3>" +
+				"<h3>" + d["Multikills"] + " Multikills</h3>" +
+				"<h3>" + d["Multikill-Best"] + " Average Multikills</h3>" +
 				"</div>" +
 				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
-				"<h2>Environmental Kills</h2>" +
+				"<h2>Environmental Kills/Deaths</h2>" +
 				"<h3>" + d["EnvironmentalKills"] + " Environmental Kills</h3>" +
+				"<h3>" + d["EnvironmentalDeaths"] + " Environmental Deaths</h3>" +
 				"</div>" +
 				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
 				"<h2>Damage Done</h2>" +
 				"<h3>" + d["DamageDone"] + " Damage Done</h3>" +
 				"<h3>" + d["DamageDone-Average"] + " Average Damage Done</h3>" +
 				"<h3>" + d["DamageDone-MostinGame"] + " Most Damage Done In Game</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Healing Done</h2>" +
+				"<h3>" + d["HealingDone"] + " Damage Done</h3>" +
+				"<h3>" + d["HealingDone-Average"] + " Average Healing Done</h3>" +
+				"<h3>" + d["HealingDone-MostinGame"] + " Most Healing Done In Game</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Offensive Assists</h2>" +
+				"<h3>" + d["OffensiveAssists"] + " Offensive Assists</h3>" +
+				"<h3>" + d["OffensiveAssists-Average"] + " Average Offensive Assists</h3>" +
+				"<h3>" + d["OffensiveAssists-MostinGame"] + " Most Offensive Assists In Game</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Defensive Assists</h2>" +
+				"<h3>" + d["DefensiveAssists"] + " Defensive Assists</h3>" +
+				"<h3>" + d["DefensiveAssists-Average"] + " Average Defensive Assists</h3>" +
+				"<h3>" + d["DefensiveAssists-MostinGame"] + " Most Defensive Assists In Game</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Recon Assists</h2>" +
+				"<h3>" + d["ReconAssists"] + " Recon Assists</h3>" +
+				"<h3>" + d["ReconAssists-Average"] + " Average Recon Assists</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Objective Time</h2>" +
+				"<h3>" + d["ObjectiveTime"] + " Objective Time</h3>" +
+				"<h3>" + d["ObjectiveTime-Average"] + " Average Objective Time</h3>" +
+				"<h3>" + d["ObjectiveTime-MostinGame"] + " Most Objective Time In Game</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>On Fire</h2>" +
+				"<h3>" + d["TimeSpentonFire"] + " Time Spent On Fire</h3>" +
+				"<h3>" + d["TimeSpentonFire-Average"] + " Average Time On Fire</h3>" +
+				"<h3>" + d["TimeSpentonFire-MostinGame"] + " Most Time On Fire In Game</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Deaths</h2>" +
+				"<h3>" + d["Deaths"] + " Deaths</h3>" +
+				"<h3>" + d["Deaths-Average"] + " Average Deaths</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Medals</h2>" +
+				"<h3>" + d["Medals"] + " Total Medals</h3>" +
+				"<h3>" + d["Medals-Gold"] + " Gold Medals</h3>" +
+				"<h3>" + d["Medals-Silver"] + " Silver Medals</h3>" +
+				"<h3>" + d["Medals-Bronze"] + " Bronze Medals</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Miscellaneous</h2>" +
+				"<h3>" + d["Cards"] + " Total Cards</h3>" +
+				"<h3>" + d["TimePlayed"] + " Played</h3>" +
+				"<h3>" + d["TeleporterPadsDestroyed"] + " Teleporter Pads Destroyed</h3>" +
+				"</div>" +
+				"<div class='col-xs-12 col-sm-6 col-md-4 center'>" +
+				"<h2>Games Stats</h2>" +
+				"<h3>" + d["GamesPlayed"] + " Games Played</h3>" +
+				"<h3>" + d["GamesWon"] + " Games Won</h3>" +
+				"<h3>" + d["GamesTied"] + " Games Tied</h3>" +
+				"<h3>" + d["GamesLost"] + " Games Lost</h3>" +
 				"</div>"
+
 
 				$($totalData).appendTo($mainrow);
 
