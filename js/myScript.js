@@ -197,7 +197,7 @@ var fetchtotal = function() {
 				"<h3>" + d["GamesWon"] + " Games Won</h3>" +
 				"<h3>" + d["GamesTied"] + " Games Tied</h3>" +
 				"<h3>" + d["GamesLost"] + " Games Lost</h3>" +
-				"</div>"
+				"</div>" +
 				//Deaths
 				"<div class='col-xs-12 col-sm-6 col-lg-4 center'>" +
 				"<h2>Deaths</h2>" +
@@ -210,7 +210,7 @@ var fetchtotal = function() {
 				"<h3>" + d["Cards"] + " Total Cards</h3>" +
 				"<h3>" + d["TimePlayed"] + " Played</h3>" +
 				"<h3>" + d["TeleporterPadsDestroyed"] + " Teleporter Pads Destroyed</h3>" +
-				"</div>" +
+				"</div>"
 
 
 				$($totalData).appendTo($mainrow);
