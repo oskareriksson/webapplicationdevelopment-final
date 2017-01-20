@@ -62,6 +62,7 @@ var fetchprofile = function() {
 				$("<h4>" + $compPlayed + " Played</h4>").addClass("center").appendTo($mainrow);
 				$("<img>").attr("src", $compRankImg).appendTo($mainrow);
 				$("<h3>" + $compRank + " Rating</h3>").addClass("center").appendTo($mainrow);
+
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
@@ -238,10 +239,22 @@ var fetchplaytime = function() {
 			dataType: "json",
 			success: function(d) {
 				$mainrow.empty();
+
+				var count = 1;
+
 				for(i = 0; i < d.length; i++){
-					$("<img>").attr("src", d[i].image).appendTo($mainrow);
-					$("<h3>" + d[i].name + "</h3>").addClass("center").appendTo($mainrow);
-					$("<h3>" + d[i].playtime + "</h3>").addClass("center").appendTo($mainrow);
+					console.log(count);
+
+					var $heroPlaytime =
+					"<div class='col-xs-12 col-sm-6 col-lg-4 center'>" +
+						"<h3>" + count + "</h3>" + "<img src='" + d[i].image + "'/>" +
+						"<h3>" + d[i].name + "</h3>" +
+						"<h3>" + d[i].playtime + "</h3>" +
+					"</div>"
+
+					$($heroPlaytime).appendTo($mainrow);
+
+					count++;
 				}
 			},
 			error: function(jqXHR, textStatus, errorThrown){
