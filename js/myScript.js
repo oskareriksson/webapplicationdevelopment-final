@@ -28,7 +28,7 @@ var fetchprofile = function() {
 
 				var $userProfile = 
 				"<div class='center'>" +
-					"<img src='" + d.data.avatar + "'/>" +
+					"<img src='" + d.data.avatar + "' class='profilepic'/>" +
 					"<h2>" + d.data.username + "</h2>" +
 					"<h3>Playtime</h3>" +
 					"<div class='col-xs-6'>" +
