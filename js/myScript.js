@@ -25,43 +25,36 @@ var fetchprofile = function() {
 			dataType: "json",
 			success: function(d){
 				$mainrow.empty();
-				var $profileImg = d.data.avatar;
-				var $username = d.data.username;
-				var $level = d.data.level;
-				var $quickPlaytime = d.data.playtime.quick;
-				var $compPlaytime = d.data.playtime.competitive;
-				var $quickWins = d.data.games.quick.wins;
-				var $compWins = d.data.games.competitive.wins;
-				var $compLoss = d.data.games.competitive.lost;
-				var $compPlayed = d.data.games.competitive.played;
-				var $compRank = d.data.competitive.rank;
-				var $compRankImg = d.data.competitive.rank_img;
 
-				if($compWins === undefined || null){
-					var $compWins = "-";
-				}
-				if($compLoss === null || undefined){
-					var $compLoss = "-";
-				}
-				if($compRank === null || undefined){
-					var $compRank = "-";
-				}
+				var $userProfile = 
+				"<div class='center'>" +
+					"<img src='" + d.data.avatar + "'/>" +
+					"<h2>" + d.data.username + "</h2>" +
+					"<h3>Playtime</h3>" +
+					"<div class='col-xs-6'>" +
+						"<h3>Quickplay</h3>" +
+						"<h4>" + d.data.playtime.quick + "</h4>" +
+					"</div>" +
+					"<div class='col-xs-6'>" +
+						"<h3>Competitive</h3>" +
+						"<h4>" + d.data.playtime.competitive + "</h4>" +
+					"</div>" +
+					"<h3>Wins/Losses</h3>" +
+					"<div class='col-xs-6'>" +
+						"<h3>Quickplay</h3>" +
+						"<h4>" + d.data.games.quick.wins + " Won</h4>" +
+					"</div>" +
+					"<div class='col-xs-6'>" +
+						"<h3>Competitive</h3>" +
+						"<h4>" + d.data.games.competitive.wins + " Won</h4>" +
+						"<h4>" + d.data.games.competitive.lost + " Lost</h4>" +
+						"<h4>" + d.data.games.competitive.played + " Played</h4>" +
+					"</div>" +
+					"<img src='" + d.data.competitive.rank_img + "'/>" +
+					"<h3>" + d.data.competitive.rank + "</h3>" +
+				"</div>"
 
-				$("<img>").attr("src", $profileImg).appendTo($mainrow);
-				$("<h2>" + $username + "</h2>").addClass("center").appendTo($mainrow);
-				$("<h3>Level: " + $level + "</h3>").addClass("center").appendTo($mainrow);
-				$("<h3>Playtime</h3>").addClass("center").appendTo($mainrow);
-				$("<h4>Quickplay: " + $quickPlaytime + "</h4>").addClass("col-xs-6 center").appendTo($mainrow);
-				$("<h4>Competitive: " + $compPlaytime + "</h4>").addClass("col-xs-6 center").appendTo($mainrow);
-				$("<h3>Wins/Losses</h3>").addClass("center").appendTo($mainrow);
-				$("<h3>Quickplay</h3>").addClass("center").appendTo($mainrow);
-				$("<h4>" + $quickWins + " Won</h4>").addClass("center").appendTo($mainrow);
-				$("<h3>Competitive</h3>").addClass("center").appendTo($mainrow);
-				$("<h4>" + $compWins + " Won</h4>").addClass("center").appendTo($mainrow);
-				$("<h4>" + $compLoss + " Lost</h4>").addClass("center").appendTo($mainrow);
-				$("<h4>" + $compPlayed + " Played</h4>").addClass("center").appendTo($mainrow);
-				$("<img>").attr("src", $compRankImg).appendTo($mainrow);
-				$("<h3>" + $compRank + " Rating</h3>").addClass("center").appendTo($mainrow);
+				$($userProfile).appendTo($mainrow);
 
 			},
 			error: function(jqXHR, textStatus, errorThrown){
