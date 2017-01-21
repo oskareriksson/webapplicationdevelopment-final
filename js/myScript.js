@@ -243,9 +243,8 @@ var fetchplaytime = function() {
 				var count = 1;
 
 				for(i = 0; i < d.length; i++){
-					console.log(count);
-
 					var $heroPlaytime =
+					
 					"<div class='col-xs-12 col-sm-6 col-lg-4 center'>" +
 						"<h3>" + count + "</h3>" + "<img src='" + d[i].image + "'/>" +
 						"<h3>" + d[i].name + "</h3>" +
