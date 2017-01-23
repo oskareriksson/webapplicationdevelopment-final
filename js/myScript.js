@@ -58,7 +58,13 @@ var fetchprofile = function() {
 				$("#loading").hide();
 			},
 			error: function(jqXHR, textStatus, errorThrown){
-				console.log(textStatus, errorThrown);
+				var $error = 
+				"<div class='col-xs-12 center'>" +
+					"<h3>" + textStatus + " " + errorThrown + "</h3>" +
+					"<h3>Oops! An error has occured. Try refreshing the page or try making the request again later.</h3>" +
+				"</div>"
+				$($error).appendTo("#mainrow");
+				$("#loading").hide();
 			}
 		});
 	});
@@ -210,7 +216,13 @@ var fetchtotal = function() {
 				$("#loading").hide();
 			},
 			error: function(jqXHR, textStatus, errorThrown){
-				console.log(textStatus, errorThrown);
+				var $error = 
+				"<div class='col-xs-12 center'>" +
+					"<h3>" + textStatus + " " + errorThrown + "</h3>" +
+					"<h3>Oops! An error has occured. Try refreshing the page or try making the request again later.</h3>" +
+				"</div>"
+				$($error).appendTo("#mainrow");
+				$("#loading").hide();
 			}
 		});
 	});
@@ -249,7 +261,13 @@ var fetchplaytime = function() {
 				$("#loading").hide();
 			},
 			error: function(jqXHR, textStatus, errorThrown){
-				console.log(textStatus, errorThrown);
+				var $error = 
+				"<div class='col-xs-12 center'>" +
+					"<h3>" + textStatus + " " + errorThrown + "</h3>" +
+					"<h3>Oops! An error has occured. Try refreshing the page or try making the request again later.</h3>" +
+				"</div>"
+				$($error).appendTo("#mainrow");
+				$("#loading").hide();
 			}
 		});
 	});
