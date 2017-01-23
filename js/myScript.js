@@ -27,7 +27,7 @@ var fetchprofile = function() {
 			success: function(d){
 
 				var $userProfile = 
-				"<div class='center'>" +
+				"<div class='col-xs-12 card center'>" +
 					"<img src='" + d.data.avatar + "' class='userpics'/>" +
 					"<h2>" + d.data.username + "</h2>" +
 					"<h3>Playtime</h3>" +
@@ -258,7 +258,7 @@ var fetchplaytime = function() {
 				for(i = 0; i < d.length; i++){
 					var $heroPlaytime =
 					
-					"<div class='col-xs-12 col-sm-6 col-lg-4 center'>" +
+					"<div class='col-xs-6 col-sm-4 col-lg-3 card center'>" +
 						"<h3>" + count + "</h3>" + "<img src='" + d[i].image + "'/>" +
 						"<h3>" + d[i].name + "</h3>" +
 						"<h3>" + d[i].playtime + "</h3>" +
