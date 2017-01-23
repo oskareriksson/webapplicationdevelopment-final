@@ -17,7 +17,7 @@ var fetchprofile = function() {
 		var $btag = $("#btag").val().replace("#", "-");
 		var $platform = $('input[name="platform"]:checked').val();
 		var $region = $('input[name="region"]:checked').val();
-		var $mainrow = $("#mainrow");
+		$("#mainrow").empty();
 		$("#loading").show();
 
 		$.ajax({
@@ -25,7 +25,6 @@ var fetchprofile = function() {
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/profile",
 			dataType: "json",
 			success: function(d){
-				$mainrow.empty();
 
 				var $userProfile = 
 				"<div class='center'>" +
@@ -55,7 +54,7 @@ var fetchprofile = function() {
 					"<h3>" + d.data.competitive.rank + "</h3>" +
 				"</div>"
 
-				$($userProfile).appendTo($mainrow);
+				$($userProfile).appendTo("#mainrow");
 				$("#loading").hide();
 			},
 			error: function(jqXHR, textStatus, errorThrown){
@@ -72,7 +71,7 @@ var fetchtotal = function() {
 		var $platform = $('input[name="platform"]:checked').val();
 		var $region = $('input[name="region"]:checked').val();
 		var $gamemode = $("#gamemode").text().toLowerCase();
-		var $mainrow = $("#mainrow");
+		$("#mainrow").empty();
 		$("#loading").show();
 
 		$.ajax({
@@ -80,7 +79,6 @@ var fetchtotal = function() {
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/allHeroes/",
 			dataType: "json",
 			success: function(d){
-				$mainrow.empty();
 
 				var $totalData = 
 				//Meele Stats
@@ -208,7 +206,7 @@ var fetchtotal = function() {
 					"<h3>" + d["TeleporterPadsDestroyed"] + " Teleporter Pads Destroyed</h3>" +
 				"</div>"
 
-				$($totalData).appendTo($mainrow);
+				$($totalData).appendTo("#mainrow");
 				$("#loading").hide();
 			},
 			error: function(jqXHR, textStatus, errorThrown){
@@ -225,7 +223,7 @@ var fetchplaytime = function() {
 		var $platform = $('input[name="platform"]:checked').val();
 		var $region = $('input[name="region"]:checked').val();
 		var $gamemode = $("#gamemode").text().toLowerCase();
-		var $mainrow = $("#mainrow");
+		$("#mainrow").empty();
 		$("#loading").show();
 
 		$.ajax({
@@ -233,8 +231,6 @@ var fetchplaytime = function() {
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/heroes",
 			dataType: "json",
 			success: function(d) {
-				$mainrow.empty();
-
 				var count = 1;
 
 				for(i = 0; i < d.length; i++){
@@ -246,7 +242,7 @@ var fetchplaytime = function() {
 						"<h3>" + d[i].playtime + "</h3>" +
 					"</div>"
 
-					$($heroPlaytime).appendTo($mainrow);
+					$($heroPlaytime).appendTo("#mainrow");
 
 					count++;
 				}
