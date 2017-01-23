@@ -18,6 +18,7 @@ var fetchprofile = function() {
 		var $platform = $('input[name="platform"]:checked').val();
 		var $region = $('input[name="region"]:checked').val();
 		var $mainrow = $("#mainrow");
+		$("#loading").show();
 
 		$.ajax({
 			method: "GET",
@@ -55,7 +56,7 @@ var fetchprofile = function() {
 				"</div>"
 
 				$($userProfile).appendTo($mainrow);
-
+				$("#loading").hide();
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
@@ -72,6 +73,7 @@ var fetchtotal = function() {
 		var $region = $('input[name="region"]:checked').val();
 		var $gamemode = $("#gamemode").text().toLowerCase();
 		var $mainrow = $("#mainrow");
+		$("#loading").show();
 
 		$.ajax({
 			method: "GET",
@@ -206,9 +208,8 @@ var fetchtotal = function() {
 					"<h3>" + d["TeleporterPadsDestroyed"] + " Teleporter Pads Destroyed</h3>" +
 				"</div>"
 
-
 				$($totalData).appendTo($mainrow);
-
+				$("#loading").hide();
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
@@ -225,6 +226,7 @@ var fetchplaytime = function() {
 		var $region = $('input[name="region"]:checked').val();
 		var $gamemode = $("#gamemode").text().toLowerCase();
 		var $mainrow = $("#mainrow");
+		$("#loading").show();
 
 		$.ajax({
 			method: "GET",
@@ -248,6 +250,7 @@ var fetchplaytime = function() {
 
 					count++;
 				}
+				$("#loading").hide();
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				console.log(textStatus, errorThrown);
