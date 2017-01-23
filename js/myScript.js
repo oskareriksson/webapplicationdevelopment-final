@@ -85,6 +85,7 @@ var fetchtotal = function() {
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/allHeroes/",
 			dataType: "json",
 			success: function(d){
+				//Since these stats doesnt count in quickplay, I make sure that their value turns into "-" if user wants the competitive stats
 				var $gamesPlayed = d["GamesPlayed"];
 				var $gamesTied = d["GamesTied"];
 				var $gamesLost = d["GamesLost"];
