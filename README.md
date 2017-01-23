@@ -22,7 +22,9 @@ In the lack of an official Overwatch API from Blizzard, the community has develo
 
 #### Description
 
-A single page application where you can fetch your stats in the game Overwatch, using a community made API in wait for an official version Enter your Battletag, select region, select platform, choose game mode and use the fetch buttons to get your stats! If you don't have a battletag, fear not! Use one of these sample tags:
+A single page application where you can fetch your stats in the game Overwatch, using a community made API in wait for an official version.
+
+Enter your Battletag, select region, select platform, choose game mode and use the fetch buttons to get your stats! If you don't have a battletag, fear not! Use one of these sample tags:
 
 * MOONMOON#1629, PC, US
 * Seagull#1894, PC, US
@@ -43,4 +45,4 @@ Will enter info here once I'm finished
 
 ### Project finished: Not yet
 
-### Grade: VG (IG/G/VG)
+### Grade: Not finished (IG/G/VG)
