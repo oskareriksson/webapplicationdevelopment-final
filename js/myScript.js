@@ -85,6 +85,15 @@ var fetchtotal = function() {
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/allHeroes/",
 			dataType: "json",
 			success: function(d){
+				var $gamesPlayed = d["GamesPlayed"];
+				var $gamesTied = d["GamesTied"];
+				var $gamesLost = d["GamesLost"];
+
+				if($gamemode === "quickplay"){
+					var $gamesPlayed = "-";
+					var $gamesTied = "-";
+					var $gamesLost = "-";
+				}
 
 				var $totalData = 
 				//Meele Stats
@@ -193,10 +202,10 @@ var fetchtotal = function() {
 				//Game Stats
 				"<div class='col-xs-12 col-sm-6 col-lg-4 center'>" +
 					"<h2>Games Stats</h2>" +
-					"<h3>" + d["GamesPlayed"] + " Games Played</h3>" +
+					"<h3>" + $gamesPlayed + " Games Played</h3>" +
 					"<h3>" + d["GamesWon"] + " Games Won</h3>" +
-					"<h3>" + d["GamesTied"] + " Games Tied</h3>" +
-					"<h3>" + d["GamesLost"] + " Games Lost</h3>" +
+					"<h3>" + $gamesTied + " Games Tied</h3>" +
+					"<h3>" + $gamesLost + " Games Lost</h3>" +
 				"</div>" +
 				//Deaths
 				"<div class='col-xs-12 col-sm-6 col-lg-4 center'>" +
