@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-
+	<!--Heading content. Here you enter b-tag, choose platform, choose region, choose gamemode and then you fetch information referenced on the buttons.-->
 	<header class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -62,6 +62,7 @@
 		</div>
 	</header>
 
+	<!--This container will be filled with content fetched from server using ajax.-->
 	<main class="container">
 		<div class="row">
 			<div id="mainrow">
@@ -70,10 +71,12 @@
 		</div>
 	</main>
 
+	<!--A div that gets the class loader on "fetch" button click, which is a spinning animation, and when the AJAX call is complete it removes the class loader.-->
 	<div class="col-xs-12">
 		<div id="loading"></div>
 	</div>
 
+	<!--Footer content with a reminder and my name.-->
 	<footer class="col-xs-12 center">
 		<p>Remember that your Battletag is case-sensitive!</p>
 		<p>&copy; Oskar Eriksson, 2017.</p>
