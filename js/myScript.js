@@ -28,7 +28,7 @@ var fetchprofile = function() {
 
 				var $userProfile = 
 				"<div class='col-xs-12 card center'>" +
-					"<img src='" + d.data.avatar + "' class='userpics'/>" +
+					"<img src='" + d.data.avatar + "' class='userpics' alt='No image'/>" +
 					"<h2>" + d.data.username + "</h2>" +
 					"<h3>Playtime</h3>" +
 					"<div class='col-xs-6'>" +
@@ -50,7 +50,7 @@ var fetchprofile = function() {
 						"<h4>" + d.data.games.competitive.lost + " Lost</h4>" +
 						"<h4>" + d.data.games.competitive.played + " Played</h4>" +
 					"</div>" +
-					"<img src='" + d.data.competitive.rank_img + "' class='userpics'/>" +
+					"<img src='" + d.data.competitive.rank_img + "' class='userpics' alt='Unranked'/>" +
 					"<h3>" + d.data.competitive.rank + "</h3>" +
 				"</div>"
 
