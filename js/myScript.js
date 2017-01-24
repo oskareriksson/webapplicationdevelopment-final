@@ -18,7 +18,7 @@ var fetchprofile = function() {
 		var $platform = $('input[name="platform"]:checked').val();
 		var $region = $('input[name="region"]:checked').val();
 		$("#mainrow").empty();
-		$("#loading").show();
+		$("#loading").addClass("loader");
 
 		$.ajax({
 			method: "GET",
@@ -55,7 +55,7 @@ var fetchprofile = function() {
 				"</div>"
 
 				$($userProfile).appendTo("#mainrow");
-				$("#loading").hide();
+				$("#loading").removeClass("loader");
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				var $error = 
@@ -64,7 +64,7 @@ var fetchprofile = function() {
 					"<h3>Oops! An error has occured. Try refreshing the page or try making the request again later.</h3>" +
 				"</div>"
 				$($error).appendTo("#mainrow");
-				$("#loading").hide();
+				$("#loading").removeClass("loader");
 			}
 		});
 	});
@@ -78,7 +78,7 @@ var fetchtotal = function() {
 		var $region = $('input[name="region"]:checked').val();
 		var $gamemode = $("#gamemode").text().toLowerCase();
 		$("#mainrow").empty();
-		$("#loading").show();
+		$("#loading").addClass("loader");
 
 		$.ajax({
 			method: "GET",
@@ -223,7 +223,7 @@ var fetchtotal = function() {
 				"</div>"
 
 				$($totalData).appendTo("#mainrow");
-				$("#loading").hide();
+				$("#loading").removeClass("loader");
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				var $error = 
@@ -232,7 +232,7 @@ var fetchtotal = function() {
 					"<h3>Oops! An error has occured. Try refreshing the page or try making the request again later.</h3>" +
 				"</div>"
 				$($error).appendTo("#mainrow");
-				$("#loading").hide();
+				$("#loading").removeClass("loader");
 			}
 		});
 	});
@@ -246,7 +246,7 @@ var fetchplaytime = function() {
 		var $region = $('input[name="region"]:checked').val();
 		var $gamemode = $("#gamemode").text().toLowerCase();
 		$("#mainrow").empty();
-		$("#loading").show();
+		$("#loading").addClass("loader");
 
 		$.ajax({
 			method: "GET",
@@ -268,7 +268,7 @@ var fetchplaytime = function() {
 
 					count++;
 				}
-				$("#loading").hide();
+				$("#loading").removeClass("loader");
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				var $error = 
@@ -277,7 +277,7 @@ var fetchplaytime = function() {
 					"<h3>Oops! An error has occured. Try refreshing the page or try making the request again later.</h3>" +
 				"</div>"
 				$($error).appendTo("#mainrow");
-				$("#loading").hide();
+				$("#loading").removeClass("loader");
 			}
 		});
 	});
