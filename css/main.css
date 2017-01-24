@@ -102,6 +102,7 @@ img {
 
 	/*Card styling*/
 	.card {
+		min-height: 254px;
 		background-color: black;
 		border-style: solid;
 		border-radius: 16px;
