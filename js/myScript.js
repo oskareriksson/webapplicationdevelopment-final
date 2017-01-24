@@ -59,7 +59,7 @@ var fetchprofile = function() {
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				var $error = 
-				"<div class='col-xs-12 center'>" +
+				"<div class='col-xs-12 card center'>" +
 					"<h3>" + textStatus + " " + errorThrown + "</h3>" +
 					"<h3>Oops! An error has occured. Try refreshing the page or try making the request again later.</h3>" +
 				"</div>"
@@ -85,7 +85,7 @@ var fetchtotal = function() {
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/" + $gamemode + "/allHeroes/",
 			dataType: "json",
 			success: function(d){
-				//Since these stats doesnt count in quickplay, I make sure that their value turns into "-" if user wants the competitive stats
+				//Since these stats doesnt count in quickplay, I make sure that their value turns into "-" when the user fetches quickplay stats.
 				var $gamesPlayed = d["GamesPlayed"];
 				var $gamesTied = d["GamesTied"];
 				var $gamesLost = d["GamesLost"];
@@ -227,7 +227,7 @@ var fetchtotal = function() {
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				var $error = 
-				"<div class='col-xs-12 center'>" +
+				"<div class='col-xs-12 card center'>" +
 					"<h3>" + textStatus + " " + errorThrown + "</h3>" +
 					"<h3>Oops! An error has occured. Try refreshing the page or try making the request again later.</h3>" +
 				"</div>"
@@ -272,7 +272,7 @@ var fetchplaytime = function() {
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 				var $error = 
-				"<div class='col-xs-12 center'>" +
+				"<div class='col-xs-12 card center'>" +
 					"<h3>" + textStatus + " " + errorThrown + "</h3>" +
 					"<h3>Oops! An error has occured. Try refreshing the page or try making the request again later.</h3>" +
 				"</div>"
