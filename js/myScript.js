@@ -1,3 +1,5 @@
+//Code by Oskar Eriksson
+
 //Gamemode selection function, alters between quickplay and competitive
 var gamemode = function() {
 	$("#gamemode").click(function(){

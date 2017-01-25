@@ -1,4 +1,4 @@
-/*My own CSS*/
+/*My CSS, written by Oskar Eriksson*/
 body {
 	background-color: black;
 }
@@ -11,6 +11,20 @@ h1, h2, h3, h4, h5, h6, p, input, button, label {
 
 .center {
 	text-align: center;
+}
+/*---------------------------------*/
+
+/*Card styling*/
+.card {
+	min-height: 261px;
+	background-color: black;
+	border-style: solid;
+	border-radius: 16px;
+	border-color: #00a5e2;
+}
+
+.card h2, h3, h4 {
+	color: #00a5e2;
 }
 /*---------------------------------*/
 
@@ -89,20 +103,6 @@ img {
 	height: 128px;
 	width: 128px;
 }
-
-	/*Card styling*/
-	.card {
-		min-height: 261px;
-		background-color: black;
-		border-style: solid;
-		border-radius: 16px;
-		border-color: #00a5e2;
-	}
-
-	.card h2, h3, h4 {
-		color: #00a5e2;
-	}
-	/*---------------------------------*/
 /*---------------------------------*/
 
 /*Loading*/
