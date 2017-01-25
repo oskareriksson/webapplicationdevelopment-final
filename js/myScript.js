@@ -27,6 +27,16 @@ var fetchprofile = function() {
 			url: "https://api.lootbox.eu/" + $platform + "/" + $region + "/" + $btag + "/profile",
 			dataType: "json",
 			success: function(d){
+				if(d.data === undefined){
+					$("#loading").removeClass("loader");
+
+					var $userError =
+					"<div class='col-xs-12 card center'>" +
+					"<h3>Oops, seems like that battletag doesnt exist! Remember that it is case-sensitive. Also make sure that you've selected the right platform and region!</h3>" +
+					"</div>";
+
+					$($userError).appendTo("#mainrow");
+				};
 
 				var $userProfile = 
 				"<div class='col-xs-12 card center'>" +
