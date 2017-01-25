@@ -52,7 +52,7 @@ var fetchprofile = function() {
 					"</div>" +
 					"<img src='" + d.data.competitive.rank_img + "' class='userpics' alt='Unranked'/>" +
 					"<h3>" + d.data.competitive.rank + "</h3>" +
-				"</div>"
+				"</div>";
 
 				$($userProfile).appendTo("#mainrow");
 				$("#loading").removeClass("loader");
@@ -220,7 +220,7 @@ var fetchtotal = function() {
 					"<h3>" + d["Cards"] + " Total Cards</h3>" +
 					"<h3>" + d["TimePlayed"] + " Played</h3>" +
 					"<h3>" + d["TeleporterPadsDestroyed"] + " Teleporter Pads Destroyed</h3>" +
-				"</div>"
+				"</div>";
 
 				$($totalData).appendTo("#mainrow");
 				$("#loading").removeClass("loader");
@@ -262,7 +262,7 @@ var fetchplaytime = function() {
 						"<h3>" + count + "</h3>" + "<img src='" + d[i].image + "'/>" +
 						"<h3>" + d[i].name + "</h3>" +
 						"<h3>" + d[i].playtime + "</h3>" +
-					"</div>"
+					"</div>";
 
 					$($heroPlaytime).appendTo("#mainrow");
 
