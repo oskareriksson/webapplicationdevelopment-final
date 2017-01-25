@@ -32,7 +32,7 @@ Enter your Battletag, select platform, select region, choose game mode and use t
 
 #### Workflow
 
-I made this web application with Mobile-first in mind, since Bootstrap is a mobile-first framework. It scales pretty well and looks alright in modern browsers. I have not tested Internet Explorer yet, though.
+I made this web application with Mobile-first in mind, since Bootstrap is a mobile-first framework. It scales pretty well and looks as intended in Firefox, Chrome and Safari. I have not tested Internet Explorer.
 
 I think that this project went well overall, but since the API is community made it had some flaws that staggered me a bit. The data structure is different for each AJAX call, so I had to take a slightly different approach for each one.
 
