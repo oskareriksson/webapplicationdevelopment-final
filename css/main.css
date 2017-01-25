@@ -3,6 +3,12 @@ body {
 	background-color: black;
 }
 
+/*Hide scrollbar in Chrome*/
+::-webkit-scrollbar {
+	display: none;
+}
+/*-------------------*/
+
 /*Text standards*/
 h1, h2, h3, h4, h5, h6, p, input, button, label {
 	font-family: "Ubuntu", sans-serif;
