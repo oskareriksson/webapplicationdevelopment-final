@@ -63,7 +63,7 @@ var fetchprofile = function() {
 						"<h4>" + d.data.games.competitive.played + " Played</h4>" +
 					"</div>" +
 					"<img src='" + d.data.competitive.rank_img + "' class='userpics' alt='Unranked'/>" +
-					"<h3>" + d.data.competitive.rank + "</h3>" +
+					"<h3>" + d.data.competitive.rank + " Rating</h3>" +
 				"</div>";
 
 				$($userProfile).appendTo("#mainrow");
