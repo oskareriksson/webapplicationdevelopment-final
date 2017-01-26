@@ -51,6 +51,6 @@ But I managed to achieve the result I wanted within the deadline I had, so overa
 
 ### [Linkedin](https://se.linkedin.com/in/oskar-eriksson-827748133 "Linkedin")
 
-### Project finished: Not yet
+### Project finished: 1/26-17
 
-### Grade: Not finished (IG/G/VG)
+### Grade: VG (IG/G/VG)
